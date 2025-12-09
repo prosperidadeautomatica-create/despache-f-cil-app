@@ -1,0 +1,158 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "yes": "Sim",
+    "no": "Não",
+    "retry": "Tentar Novamente",
+    "appName": "Despacho fácil"
+  },
+  "auth": {
+    "welcome": "Bem-vindo ao Despacho fácil",
+    "signIn": "Entrar",
+    "signUp": "Cadastrar",
+    "signOut": "Sair",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "fullName": "Nome Completo",
+    "name": "Nome",
+    "signInDescription": "Entre para gerenciar suas cotações de envio",
+    "signUpDescription": "Cadastre-se para começar a gerenciar suas cotações de envio",
+    "createAccount": "Criar uma Conta",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "signingIn": "Entrando...",
+    "creatingAccount": "Criando conta...",
+    "checkingAuth": "Verificando autenticação...",
+    "loginFailed": "Falha no login. Verifique suas credenciais.",
+    "signupFailed": "Falha no cadastro. Tente novamente.",
+    "invalidEmail": "Endereço de e-mail inválido",
+    "passwordMinLength": "A senha deve ter pelo menos 6 caracteres",
+    "nameMinLength": "O nome deve ter pelo menos 2 caracteres",
+    "passwordsDontMatch": "As senhas não coincidem",
+    "demoCredentials": "Credenciais de Demonstração:",
+    "demoEmail": "E-mail: demo@easydispatch.com",
+    "demoPassword": "Senha: demo123"
+  },
+  "navigation": {
+    "newQuote": "Nova Cotação",
+    "dashboard": "Painel",
+    "home": "Início"
+  },
+  "quote": {
+    "getQuote": "Obter Cotação",
+    "getShippingQuote": "Obter uma Cotação de Envio",
+    "quoteDescription": "Digite os detalhes do seu envio para receber preços instantâneos",
+    "shipmentInformation": "Informações do Envio",
+    "shipmentDetails": "Preencha os detalhes do seu pacote",
+    "originPostalCode": "CEP de Origem",
+    "destinationPostalCode": "CEP de Destino",
+    "weight": "Peso (kg)",
+    "weightTooltip": "Digite o peso do pacote em quilogramas",
+    "length": "Comprimento (cm)",
+    "width": "Largura (cm)",
+    "height": "Altura (cm)",
+    "serviceOptions": "Opções de Serviço",
+    "declaredValue": "Valor Declarado (opcional)",
+    "calculating": "Calculando...",
+    "quoteGenerated": "Cotação gerada com sucesso!",
+    "correlationId": "ID de Correlação",
+    "correlationIdCopied": "ID de correlação copiado para a área de transferência",
+    "failedToGenerate": "Falha ao gerar cotação. Tente novamente.",
+    "postalCodeInvalid": "O CEP deve ter 8 dígitos",
+    "weightMin": "O peso deve ser pelo menos 0,1 kg",
+    "dimensionMin": "O comprimento deve ser pelo menos 1 cm",
+    "insurance": "Seguro",
+    "signatureRequired": "Assinatura Obrigatória",
+    "realTimeTracking": "Rastreamento em Tempo Real"
+  },
+  "dashboard": {
+    "title": "Painel",
+    "description": "Acompanhe e gerencie todas as suas cotações de envio",
+    "totalQuotes": "Total de Cotações (7d)",
+    "averagePrice": "Preço Médio",
+    "errors": "Erros",
+    "filters": "Filtros",
+    "searchQuotes": "Buscar cotações...",
+    "allStatuses": "Todos os status",
+    "allCarriers": "Todas as transportadoras",
+    "status": "Status",
+    "carrier": "Transportadora",
+    "noQuotesYet": "Ainda não há cotações",
+    "noQuotesDescription": "Crie sua primeira cotação para começar a acompanhar envios e comparar preços de transportadoras.",
+    "failedToLoad": "Falha ao carregar cotações"
+  },
+  "quoteDetail": {
+    "title": "Detalhes da Cotação",
+    "carrier": "Transportadora",
+    "created": "Criado",
+    "estimatedDelivery": "Entrega estimada",
+    "shipmentDetails": "Detalhes do Envio",
+    "origin": "Origem:",
+    "destination": "Destino:",
+    "dimensions": "Dimensões:",
+    "regenerateQuote": "Regenerar Cotação",
+    "regenerating": "Regenerando...",
+    "quoteRegenerated": "Cotação regenerada",
+    "regeneratedDescription": "A cotação foi regenerada com sucesso.",
+    "failedToRegenerate": "Falha ao regenerar",
+    "failedToRegenerateDescription": "Não foi possível regenerar a cotação. Tente novamente.",
+    "debugInformation": "Informações de Depuração"
+  },
+  "quoteItem": {
+    "status": {
+      "success": "Sucesso",
+      "pending": "Pendente",
+      "error": "Erro",
+      "carrierTimeout": "Timeout da Transportadora"
+    }
+  },
+  "home": {
+    "title": "Cotações de Envio",
+    "subtitle": "Simplificado",
+    "description": "Gerenciamento profissional de cotações logísticas para empresas de todos os tamanhos. Compare transportadoras, acompanhe cotações e gerencie seus envios com eficiência.",
+    "metaDescription": "Gerenciamento profissional de cotações logísticas para empresas de todos os tamanhos. Compare transportadoras, acompanhe cotações e gerencie seus envios com eficiência.",
+    "getStarted": "Começar",
+    "startNow": "Comece Agora",
+    "readyToStreamline": "Pronto para otimizar seus envios?",
+    "joinBusinesses": "Junte-se às empresas que usam o Despacho fácil para economizar tempo e dinheiro em logística.",
+    "features": {
+      "instantQuotes": {
+        "title": "Cotações Instantâneas",
+        "description": "Obtenha cotações de envio em segundos de várias transportadoras"
+      },
+      "priceTransparency": {
+        "title": "Transparência de Preços",
+        "description": "Detalhamento claro de custos, margens e preços finais"
+      },
+      "reliableTracking": {
+        "title": "Rastreamento Confiável",
+        "description": "Acompanhe todas as cotações com IDs de correlação e atualizações em tempo real"
+      },
+      "multiCarrier": {
+        "title": "Múltiplas Transportadoras",
+        "description": "Compare tarifas da FedEx, UPS, DHL e mais"
+      }
+    },
+    "footer": "© 2024 Despacho fácil. Construído para gerenciamento logístico eficiente."
+  },
+  "language": {
+    "english": "English",
+    "portuguese": "Português (Brasil)",
+    "selectLanguage": "Selecionar Idioma"
+  }
+}
+

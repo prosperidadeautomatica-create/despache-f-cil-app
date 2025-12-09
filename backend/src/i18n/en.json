@@ -1,0 +1,20 @@
+{
+  "auth": {
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "EMAIL_ALREADY_REGISTERED": "Email already registered"
+  },
+  "validation": {
+    "INVALID_EMAIL": "Please provide a valid email address",
+    "NAME_MIN_LENGTH": "Name must be at least 2 characters",
+    "PASSWORD_MIN_LENGTH": "Password must be at least 6 characters"
+  },
+  "quote": {
+    "FAILED_TO_CREATE": "Failed to create quote",
+    "QUOTE_NOT_FOUND": "Quote not found"
+  },
+  "common": {
+    "INTERNAL_SERVER_ERROR": "Internal server error",
+    "AN_ERROR_OCCURRED": "An error occurred"
+  }
+}
+

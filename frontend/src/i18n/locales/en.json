@@ -1,0 +1,158 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "copy": "Copy",
+    "copied": "Copied",
+    "yes": "Yes",
+    "no": "No",
+    "retry": "Retry",
+    "appName": "Easy Dispatch"
+  },
+  "auth": {
+    "welcome": "Welcome to Easy Dispatch",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "name": "Name",
+    "signInDescription": "Sign in to manage your shipping quotes",
+    "signUpDescription": "Sign up to start managing your shipping quotes",
+    "createAccount": "Create an Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signingIn": "Signing in...",
+    "creatingAccount": "Creating account...",
+    "checkingAuth": "Checking authentication...",
+    "loginFailed": "Login failed. Please check your credentials.",
+    "signupFailed": "Signup failed. Please try again.",
+    "invalidEmail": "Invalid email address",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "nameMinLength": "Name must be at least 2 characters",
+    "passwordsDontMatch": "Passwords don't match",
+    "demoCredentials": "Demo Credentials:",
+    "demoEmail": "Email: demo@easydispatch.com",
+    "demoPassword": "Password: demo123"
+  },
+  "navigation": {
+    "newQuote": "New Quote",
+    "dashboard": "Dashboard",
+    "home": "Home"
+  },
+  "quote": {
+    "getQuote": "Get Quote",
+    "getShippingQuote": "Get a Shipping Quote",
+    "quoteDescription": "Enter your shipment details to receive instant pricing",
+    "shipmentInformation": "Shipment Information",
+    "shipmentDetails": "Fill in the details of your package",
+    "originPostalCode": "Origin Postal Code",
+    "destinationPostalCode": "Destination Postal Code",
+    "weight": "Weight (kg)",
+    "weightTooltip": "Enter the package weight in kilograms",
+    "length": "Length (cm)",
+    "width": "Width (cm)",
+    "height": "Height (cm)",
+    "serviceOptions": "Service Options",
+    "declaredValue": "Declared Value (optional)",
+    "calculating": "Calculating...",
+    "quoteGenerated": "Quote generated successfully!",
+    "correlationId": "Correlation ID",
+    "correlationIdCopied": "Correlation ID copied to clipboard",
+    "failedToGenerate": "Failed to generate quote. Please try again.",
+    "postalCodeInvalid": "Postal code must be 8 digits",
+    "weightMin": "Weight must be at least 0.1 kg",
+    "dimensionMin": "Length must be at least 1 cm",
+    "insurance": "Insurance",
+    "signatureRequired": "Signature Required",
+    "realTimeTracking": "Real-time Tracking"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Track and manage all your shipping quotes",
+    "totalQuotes": "Total Quotes (7d)",
+    "averagePrice": "Average Price",
+    "errors": "Errors",
+    "filters": "Filters",
+    "searchQuotes": "Search quotes...",
+    "allStatuses": "All statuses",
+    "allCarriers": "All carriers",
+    "status": "Status",
+    "carrier": "Carrier",
+    "noQuotesYet": "No quotes yet",
+    "noQuotesDescription": "Create your first quote to start tracking shipments and comparing carrier prices.",
+    "failedToLoad": "Failed to load quotes"
+  },
+  "quoteDetail": {
+    "title": "Quote Details",
+    "carrier": "Carrier",
+    "created": "Created",
+    "estimatedDelivery": "Est. delivery",
+    "shipmentDetails": "Shipment Details",
+    "origin": "Origin:",
+    "destination": "Destination:",
+    "dimensions": "Dimensions:",
+    "regenerateQuote": "Regenerate Quote",
+    "regenerating": "Regenerating...",
+    "quoteRegenerated": "Quote regenerated",
+    "regeneratedDescription": "The quote has been successfully regenerated.",
+    "failedToRegenerate": "Failed to regenerate",
+    "failedToRegenerateDescription": "Could not regenerate the quote. Please try again.",
+    "debugInformation": "Debug Information"
+  },
+  "quoteItem": {
+    "status": {
+      "success": "Success",
+      "pending": "Pending",
+      "error": "Error",
+      "carrierTimeout": "Carrier Timeout"
+    }
+  },
+  "home": {
+    "title": "Shipping Quotes",
+    "subtitle": "Made Simple",
+    "description": "Professional logistics quote management for businesses of all sizes. Compare carriers, track quotes, and manage your shipping efficiently.",
+    "metaDescription": "Professional logistics quote management for businesses of all sizes. Compare carriers, track quotes, and manage your shipping efficiently.",
+    "getStarted": "Get Started",
+    "startNow": "Start Now",
+    "readyToStreamline": "Ready to streamline your shipping?",
+    "joinBusinesses": "Join businesses using Easy Dispatch to save time and money on logistics.",
+    "features": {
+      "instantQuotes": {
+        "title": "Instant Quotes",
+        "description": "Get shipping quotes in seconds from multiple carriers"
+      },
+      "priceTransparency": {
+        "title": "Price Transparency",
+        "description": "Clear breakdown of costs, markups, and final pricing"
+      },
+      "reliableTracking": {
+        "title": "Reliable Tracking",
+        "description": "Track all quotes with correlation IDs and real-time updates"
+      },
+      "multiCarrier": {
+        "title": "Multi-Carrier",
+        "description": "Compare rates from FedEx, UPS, DHL, and more"
+      }
+    },
+    "footer": "© 2024 Easy Dispatch. Built for efficient logistics management."
+  },
+  "language": {
+    "english": "English",
+    "portuguese": "Português (Brasil)",
+    "selectLanguage": "Select Language"
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "auth": {
+    "INVALID_CREDENTIALS": "Credenciais inválidas",
+    "EMAIL_ALREADY_REGISTERED": "E-mail já cadastrado"
+  },
+  "validation": {
+    "INVALID_EMAIL": "Por favor, forneça um endereço de e-mail válido",
+    "NAME_MIN_LENGTH": "O nome deve ter pelo menos 2 caracteres",
+    "PASSWORD_MIN_LENGTH": "A senha deve ter pelo menos 6 caracteres"
+  },
+  "quote": {
+    "FAILED_TO_CREATE": "Falha ao criar cotação",
+    "QUOTE_NOT_FOUND": "Cotação não encontrada"
+  },
+  "common": {
+    "INTERNAL_SERVER_ERROR": "Erro interno do servidor",
+    "AN_ERROR_OCCURRED": "Ocorreu um erro"
+  }
+}
+
