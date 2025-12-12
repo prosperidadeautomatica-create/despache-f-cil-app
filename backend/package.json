@@ -42,7 +42,11 @@
     "passport-local": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "@nestjs/cli": "^10.2.1",
+    "typescript": "^5.3.3",
+    "ts-loader": "^9.5.1"
+    
   },
   "devDependencies": {
     "@nestjs/cli": "^10.2.1",
