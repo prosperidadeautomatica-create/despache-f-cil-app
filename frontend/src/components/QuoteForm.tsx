@@ -9,7 +9,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Loader2, Info } from 'lucide-react';
 import DebouncedPostalInput from './DebouncedPostalInput';
 import { QuoteRequest } from '@/types/quote';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   Tooltip,
   TooltipContent,
@@ -35,7 +34,7 @@ const createQuoteSchema = (t: (key: string) => string) => z.object({
 
 interface QuoteFormProps {
   onSubmit: (payload: QuoteRequest) => Promise<void>;
-  initialValues?: Partial<QuoteFormData>;
+  initialValues?: Partial<QuoteRequest>;
   disabled?: boolean;
 }
 

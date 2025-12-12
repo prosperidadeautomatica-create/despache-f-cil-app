@@ -11,6 +11,7 @@ import { FirestoreModule } from './firestore/firestore.module';
 import { CommonModule } from './common/common.module';
 import { LabelsModule } from './labels/labels.module';
 import { configValidationSchema } from './config/config.schema';
+import { AppController } from './app.controller';
 
 // Determine the correct i18n path (works in both dev and production)
 const getI18nPath = () => {
@@ -50,6 +51,7 @@ const getI18nPath = () => {
     CarriersModule,
     QuotesModule,
     LabelsModule,
+    AppController,
     // FrontendModule removed - using Express middleware in main.ts instead
   ],
 })
