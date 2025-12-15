@@ -51,9 +51,9 @@ const getI18nPath = () => {
     CarriersModule,
     QuotesModule,
     LabelsModule,
-    AppController,
     // FrontendModule removed - using Express middleware in main.ts instead
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
 
