@@ -5,9 +5,12 @@ import {
   HttpException,
   HttpStatus,
   Logger,
+  NotFoundException,
 } from '@nestjs/common';
 import { I18nContext } from 'nestjs-i18n';
 import { Request, Response } from 'express';
+import { join } from 'path';
+import { existsSync } from 'fs';
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {
@@ -19,6 +22,17 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const request = ctx.getRequest<Request>();
     const correlationId = (request as any).correlationId || 'unknown';
     const i18n = I18nContext.current();
+
+    // Handle NotFoundException for non-API routes - try to serve frontend
+    if (exception instanceof NotFoundException && !request.path.startsWith('/api')) {
+      const frontendPath = join(process.cwd(), 'frontend');
+      const indexPath = join(frontendPath, 'index.html');
+      
+      if (existsSync(indexPath)) {
+        this.logger.log(`[${correlationId}] Serving frontend for ${request.path}`);
+        return response.sendFile(indexPath);
+      }
+    }
 
     let status = HttpStatus.INTERNAL_SERVER_ERROR;
     let message = i18n?.t('common.INTERNAL_SERVER_ERROR') || 'Internal server error';

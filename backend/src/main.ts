@@ -18,6 +18,11 @@ async function bootstrap() {
   // We need to go up to backend root, then into frontend
   const frontendPath = join(process.cwd(), 'frontend');
   
+  // Log path information for debugging
+  console.log(`Current working directory: ${process.cwd()}`);
+  console.log(`Looking for frontend at: ${frontendPath}`);
+  console.log(`Frontend exists: ${existsSync(frontendPath)}`);
+  
   if (existsSync(frontendPath)) {
     app.useStaticAssets(frontendPath, {
       index: false,
@@ -72,23 +77,43 @@ async function bootstrap() {
 
   // Catch-all handler for frontend routes (must be after all API routes)
   // This serves index.html for client-side routing
-  if (existsSync(frontendPath)) {
-    app.use((req, res, next) => {
-      // Skip API routes and static assets
-      if (req.path.startsWith('/api') || req.path.startsWith('/assets')) {
-        return next();
-      }
-      // Serve index.html for all other routes (client-side routing)
-      const indexPath = join(frontendPath, 'index.html');
-      if (existsSync(indexPath)) {
-        res.sendFile(indexPath);
-      } else {
-        res.status(404).json({ 
-          message: 'Frontend index.html not found. Please build the frontend.' 
-        });
-      }
-    });
-  }
+  app.use((req, res, next) => {
+    // Skip API routes and static assets
+    if (req.path.startsWith('/api') || req.path.startsWith('/assets')) {
+      return next();
+    }
+    
+    // Serve index.html for all other routes (client-side routing)
+    const indexPath = join(frontendPath, 'index.html');
+    console.log(`[Catch-all] Request to ${req.path}, checking for index.html at: ${indexPath}`);
+    
+    if (existsSync(indexPath)) {
+      // Use absolute path for sendFile
+      console.log(`[Catch-all] Serving index.html from: ${indexPath}`);
+      res.sendFile(indexPath, (err) => {
+        if (err) {
+          console.error(`[Catch-all] Error serving index.html:`, err);
+          res.status(500).json({
+            code: 'HTTP_EXCEPTION',
+            message: 'Error serving frontend',
+            correlationId: (req as any).correlationId || 'unknown',
+            timestamp: new Date().toISOString(),
+            path: req.path,
+          });
+        }
+      });
+    } else {
+      // If frontend doesn't exist, return a helpful error
+      console.warn(`[Catch-all] Frontend index.html not found at: ${indexPath}`);
+      res.status(404).json({ 
+        code: 'HTTP_EXCEPTION',
+        message: 'Frontend not found. Please build the frontend and ensure it is deployed.',
+        correlationId: (req as any).correlationId || 'unknown',
+        timestamp: new Date().toISOString(),
+        path: req.path,
+      });
+    }
+  });
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
