@@ -31,6 +31,19 @@ export class QuotesService {
     const quoteId = uuidv4();
     const startTime = Date.now();
 
+    // Convert DTO to plain object for Firestore serialization
+    // Use JSON.parse/stringify to ensure it's a completely plain object
+    const requestPayload = JSON.parse(JSON.stringify({
+      originPostal: request.originPostal,
+      destinationPostal: request.destinationPostal,
+      weight: request.weight,
+      length: request.length,
+      width: request.width,
+      height: request.height,
+      serviceOptions: request.serviceOptions || undefined,
+      declaredValue: request.declaredValue || undefined,
+    }));
+
     const quote: Quote = {
       quoteId,
       clientId,
@@ -51,7 +64,7 @@ export class QuotesService {
       },
       serviceOptions: request.serviceOptions,
       declaredValue: request.declaredValue,
-      requestPayload: request as any,
+      requestPayload,
     };
 
     try {
