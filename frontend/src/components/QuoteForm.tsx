@@ -75,11 +75,13 @@ export default function QuoteForm({
       length: 10,
       width: 10,
       height: 10,
+      serviceOptions: [],
     },
   });
 
   const originPostal = watch('originPostal') || '';
   const destinationPostal = watch('destinationPostal') || '';
+  const serviceOptions = watch('serviceOptions') || [];
 
   const onFormSubmit = async (data: QuoteFormData) => {
     try {
@@ -90,7 +92,7 @@ export default function QuoteForm({
         length: data.length,
         width: data.width,
         height: data.height,
-        serviceOptions: data.serviceOptions,
+        serviceOptions: data.serviceOptions && data.serviceOptions.length > 0 ? data.serviceOptions : undefined,
         declaredValue: data.declaredValue,
       };
       await onSubmit(payload);
@@ -198,22 +200,38 @@ export default function QuoteForm({
       <div className="space-y-3">
         <Label>{t('quote.serviceOptions')}</Label>
         <div className="space-y-2">
-          {SERVICE_OPTIONS.map((option) => (
-            <div key={option.id} className="flex items-center space-x-2">
-              <Checkbox
-                id={option.id}
-                {...register('serviceOptions')}
-                value={option.id}
-                disabled={disabled || isSubmitting}
-              />
-              <label
-                htmlFor={option.id}
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {option.label}
-              </label>
-            </div>
-          ))}
+          {SERVICE_OPTIONS.map((option) => {
+            const isChecked = serviceOptions.includes(option.id);
+            return (
+              <div key={option.id} className="flex items-center space-x-2">
+                <Checkbox
+                  id={option.id}
+                  checked={isChecked}
+                  onCheckedChange={(checked) => {
+                    const currentOptions = serviceOptions || [];
+                    if (checked) {
+                      setValue('serviceOptions', [...currentOptions, option.id], {
+                        shouldValidate: true,
+                      });
+                    } else {
+                      setValue(
+                        'serviceOptions',
+                        currentOptions.filter((id) => id !== option.id),
+                        { shouldValidate: true }
+                      );
+                    }
+                  }}
+                  disabled={disabled || isSubmitting}
+                />
+                <label
+                  htmlFor={option.id}
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  {option.label}
+                </label>
+              </div>
+            );
+          })}
         </div>
       </div>
 
